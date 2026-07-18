@@ -77,6 +77,34 @@ The heatmap will be saved as outputs/risk_heatmap.png (or your custom path).
 ## 📷 Screenshot
 ![Example Heatmap](screenshots/heatmap_example.png)
 
+## 🌐 Web Interface (Streamlit)
+
+**Try it live:** 👉 [Launch GRC Risk Heatmap Generator](https://danielmogilevskiy-grc-risk-heatmap.streamlit.app/)
+
+In addition to the command-line tool, this project includes an **interactive web interface** built with [Streamlit](https://streamlit.io).  
+It provides a more user-friendly way to generate risk heatmaps with visual feedback and real-time customisation.
+
+### Features
+
+- 📂 **Upload CSV** — drag & drop or browse for your risk data
+- 🎨 **Colour palette selection** — choose from multiple schemes (Reds, Blues, Greens, etc.)
+- 🔥 **Real-time heatmap** — instantly see your data visualised
+- 💾 **Download results** — save the heatmap as a high-resolution PNG
+- 🖥️ **Clean, intuitive UI** — perfect for non-technical stakeholders
+
+### How to Run Locally
+
+Make sure you're in the project root and your virtual environment is activated:
+
+```bash
+streamlit run app.py
+```
+Your browser will open automatically at http://localhost:8501.
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://danielmogilevskiy-grc-risk-heatmap.streamlit.app/)
+
+![Streamlit Report](screenshots/Heatmap_app.png)
+
 ## 🛠 Customisation
 - Change the colour palette by modifying the `cmap` parameter (e.g., `'Blues'`, `'Greens'`).
 - The script counts occurrences; you can modify it to average scores or use weighted values.
