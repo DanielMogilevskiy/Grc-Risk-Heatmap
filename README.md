@@ -1,27 +1,78 @@
-# GRC Risk Heatmap Generator
+# 🔥 GRC Risk Heatmap Generator
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+---
 
 ## 📌 What is this?
-A simple yet professional Python tool to generate a 5×5 risk heatmap from a CSV file containing risk likelihood and impact scores. The heatmap visually highlights which risk combinations are most frequent (or severe), aiding in prioritisation.
+
+A lightweight Python tool that transforms a CSV file with risk scores into a **5×5 risk heatmap** – a colour‑coded matrix that instantly shows which combinations of **likelihood** and **impact** are most frequent.
+
+---
 
 ## 🎯 Why was it made?
-To provide GRC professionals and security analysts with an instant visual summary of their risk landscape, making it easier to communicate findings to non‑technical stakeholders.
+
+In Governance, Risk, and Compliance (GRC), risk registers are often huge tables of numbers.  
+This tool **visualises** that data, enabling:
+
+- Quick identification of **high‑priority risk clusters**
+- Clear communication to **non‑technical stakeholders**
+- Faster **decision‑making** on risk mitigation budgets
+
+---
 
 ## 🔥 What GRC problem does it solve?
-Traditional risk registers are tables of numbers; this tool turns them into an intuitive colour‑coded matrix. It reveals clusters of high‑impact/high‑likelihood risks at a glance, supporting better decision‑making.
+
+- **Before**: dozens of rows with likelihood/impact scores – hard to interpret.
+- **After**: a single heatmap where **red = urgent attention**, **yellow = monitor**, **green = low priority**.
+
+It helps answer:
+
+> *"Where are we most exposed?"*  
+> *"Which risks need immediate action?"*
+
+---
 
 ## 🚀 How to run it
-1. **Clone this repository**  
-   `git clone https://github.com/DanielMogilevskiy/grc-risk-heatmap.git`
-2. **Install dependencies**  
-   `pip install -r requirements.txt`
-3. **Prepare your data** – place a CSV file (with columns `likelihood` and `impact`, each 1–5) in the `data/` folder, or specify a custom path.
-4. **Run the script**  
-   `python src/generate_heatmap.py`  
-   (You can also pass your own CSV path: `python src/generate_heatmap.py path/to/your.csv`)
-5. **Find the output** – the heatmap image is saved in `outputs/risk_heatmap.png`.
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/DanielMogilevskiy/grc-risk-heatmap.git
+cd grc-risk-heatmap
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Prepare your data
+
+Example (sample_risks.csv is provided):
+
+```csv
+risk_name,likelihood,impact
+Data breach,5,5
+Phishing attack,4,4
+...
+```
+
+### 4️⃣ Run the script
+
+```bash
+python src/generate_heatmap.py
+```
+You can also pass custom paths:
+```bash
+python src/generate_heatmap.py data/my_risks.csv outputs/my_heatmap.png
+```
+
+### 5️⃣ View the result
+The heatmap will be saved as outputs/risk_heatmap.png (or your custom path).
 
 ## 📷 Screenshot
 ![Example Heatmap](screenshots/heatmap_example.png)
@@ -30,8 +81,16 @@ Traditional risk registers are tables of numbers; this tool turns them into an i
 - Change the colour palette by modifying the `cmap` parameter (e.g., `'Blues'`, `'Greens'`).
 - The script counts occurrences; you can modify it to average scores or use weighted values.
 
-## 📄 License
-MIT – free to use and modify.
+## 🤝 Contributing
 
-## 👤 Author
-Daniel Mogilevskiy – [GitHub](https://github.com/DanielMogilevskiy)
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+Maintained by [Daniel Mogilevskiy](https://www.linkedin.com/in/daniel-mogilevskiy/)
