@@ -1,0 +1,21 @@
+risk_name,likelihood,impact
+Data breach,5,5
+Phishing attack,4,4
+Ransomware,3,5
+Insider threat,2,3
+Compliance violation,4,5
+System outage,3,4
+Third-party failure,2,4
+Misconfiguration,3,3
+Human error,4,2
+Malware infection,5,3
+DDoS attack,4,5
+Social engineering,5,4
+Lost device,3,2
+Weak passwords,4,3
+Unpatched software,5,4
+Access control issue,2,5
+Data leakage,4,5
+Business continuity,3,3
+Regulatory fine,5,5
+Reputation damage,4,4
