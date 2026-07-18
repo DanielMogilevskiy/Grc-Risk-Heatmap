@@ -26,21 +26,6 @@ Traditional risk registers are tables of numbers; this tool turns them into an i
 ## 📷 Screenshot
 ![Example Heatmap](screenshots/heatmap_example.png)
 
-## 📂 Project Structure
-.
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── LICENSE
-├── src/
-│ └── generate_heatmap.py
-├── data/
-│ └── sample_risks.csv
-├── outputs/
-│ └── risk_heatmap.png
-└── screenshots/
-└── heatmap_example.png
-
 ## 🛠 Customisation
 - Change the colour palette by modifying the `cmap` parameter (e.g., `'Blues'`, `'Greens'`).
 - The script counts occurrences; you can modify it to average scores or use weighted values.
